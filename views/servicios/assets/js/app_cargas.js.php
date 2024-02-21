@@ -35,7 +35,7 @@ const getServicios = () => {
             if (servicios[x].hopper != hopper) {
                 hopper = servicios[x].hopper
                 htmlservicios += /*html*/ `
-                                                <div class='col '>
+                                                <div class='col${((servicios.length > 4) ? '-md-4' : '')}'>
                                                             <div class='card sombra'>
                                                                   <div class='card-content'>
                                                                         <div class='card-header'>
@@ -724,7 +724,7 @@ function detenerServicio(id, almacen_id = "1") {
             cargaspendientes = r;
             let servicio = servicios.filter(el => el.id_servicio == id)[0];
             console.log(cargaspendientes);
-            if (cargaspendientes.cargaspendientes[0].pendientes == "1") {
+            if ((cargaspendientes.cargaspendientes[0].pendientes == "1") && (servicio.puertas > 0)) {
                 var html = `
                         <div class='row'>
                             <div class='col-11'>

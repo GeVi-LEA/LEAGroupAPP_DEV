@@ -73,12 +73,14 @@ $(document).ready(function() {
                                                 <div class="col-12 datos mt-2 mb-1">
                                                       <strong class="mr-1"># Unidad:</strong><input type="text" name="numeroUnidad" id="numeroUnidad" class="item" required/> 
                                                 </div>
+                                                <p><span class="emsg hidden">Número de UNIDAD no Válido (ABCD123456)</span></p>
                                           </div>
-                                          <h4 class="form-section"><i class="ft-user"></i> Datos Cliente</h4>
-                                          <div class="form-group row mt-2">
+                                          <h4 class="form-section section-cliente"><i class="ft-user"></i> Datos Cliente</h4>
+                                          <div class="form-group row mt-2  section-cliente">
                                                 <div class="col-12 datos mt-2 mb-1">
                                                       ${htmlclientes}
                                                 </div>
+                                                
                                           </div>
                                           
                                           <div class="form-group row mt-2">
@@ -141,7 +143,7 @@ $(document).ready(function() {
                               </section>`,
                 preConfirm: () => {
                     if (validaCampos()) {
-                        erpalert("error", "", "Validar campor obligatorios")
+                        erpalert("error", "", "Validar campos obligatorios")
                         return false; // Prevent confirmed
                     }
                 },
@@ -220,7 +222,7 @@ const validaCampos = () => {
         $("#numeroUnidad").addClass("checked");
     }
     $("#cliente").removeClass("invalid").removeClass("checked");
-    if ($("#cliente").val() == "") {
+    if (($("#cliente").val() == "") && ($("#cliente").is(":visible"))) {
         faltan = true;
         $("#cliente").addClass("invalid");
     } else {
@@ -260,6 +262,7 @@ const validaCampos = () => {
     // $("#cliente").val()
     return faltan;
 }
+
 let cantidades;
 const validaCantidades = () => {
     jQuery.ajax({
@@ -329,4 +332,21 @@ function getChoferes(transp_id) {
         },
     });
 }
+
+/*
+function cambiaFerrotolva(ferrotolva) {
+    var ferro = ferrotolva; //$(this).val();
+    var seccionCamion = $("#seccionCamion");
+    var seccionFerrotolva = $("#seccionFerrotolva");
+    console.log("cambiaFerro inter");
+    if (ferro == "F") {
+
+
+
+
+    } else {
+
+
+    }
+}*/
 </script>
