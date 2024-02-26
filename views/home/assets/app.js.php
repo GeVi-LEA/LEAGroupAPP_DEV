@@ -75,6 +75,17 @@ $(document).ready(function() {
                                                 </div>
                                                 <p><span class="emsg hidden">Número de UNIDAD no Válido (ABCD123456)</span></p>
                                           </div>
+                                          <div class="form-group row">
+                                                <div class="col-12 ">
+                                                    <strong class="mr-1">Producto:</strong>
+                                                    <div id="divRadios" class="div-radios">
+                                                            <strong for="tipo_producto">Polietileno:</strong>
+                                                            <input class="ml-1 mr-3" id="tipo_producto" type="radio" name="tipo_producto" value="0" checked required/>
+                                                            <strong for="tipo_productoL">Lubricante:</strong>
+                                                            <input class="ml-1" type="radio" id="tipo_productoL" name="tipo_producto" value="1" required/>
+                                                      </div>                                                    
+                                                </div>
+                                          </div>
                                           <h4 class="form-section section-cliente"><i class="ft-user"></i> Datos Cliente</h4>
                                           <div class="form-group row mt-2  section-cliente">
                                                 <div class="col-12 datos mt-2 mb-1">
