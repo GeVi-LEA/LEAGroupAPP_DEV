@@ -437,6 +437,11 @@ class ServicioEnsacado
                 , usuario_fin = {$_SESSION['usuario']->id} 
                 where id={$this->getId()}";
         $save = $this->db->query($sql);
+
+        /* GENERA DOCUMENTO DE ENSACADO PARA LA UNIDAD  14/03/2024 */
+        
+
+
         $sql  = "
             update servicios_entradas
             set estatus_id = 3

@@ -34,8 +34,11 @@
     <script type='text/javascript' src='../servicios/assets/js/servicios.js'></script>
 
     <script>
-    let __url__ = "<?php echo root_url; ?>";
-    localStorage.setItem("_URL_", __url__);
+    let __url_app__ = "<?php echo root_url; ?>";
+    localStorage.setItem("_URL_APP_", __url_app__);
+
+    let __url_erp__ = "<?php echo URL; ?>";
+    localStorage.setItem("_URL_ERP_", __url_erp__);
 
     function erpalert(
         tipo = "",

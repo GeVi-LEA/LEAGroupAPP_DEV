@@ -4,6 +4,7 @@ $_root    = str_replace('\\', '/', preg_replace($_pattern, '$1', root));
 $base     = substr($_root, 0, strpos($_root, 'LEAGroupAPP_DEV')) . 'LEAGroupAPP_DEV';
 define('base', $base);
 define('root_url', 'http://192.168.0.32/LEAGroupAPP_DEV/');
+define('URL', 'http://192.168.0.32/GrupoLEA_DEV/');
 define('idioma', 'spanish');
 define('BD_CAMIONERA', 'MToledoCam');
 define('BD_FERRO', 'MToledo');
@@ -62,7 +63,7 @@ define('compras_fletes', array('nombre'   => 'Sonia Arredondo',                 
 define('compras', array('nombre'          => 'Liliana Garza',                    'correo'  => 'lgarza@leademexico.com',     'telefono' => '8181587418'));
 define('gerencia', array('nombre'         => 'Celestino Perez',                  'correo'  => 'cperez@leademexico.com'));
 define('usuarios', array('compras_fletes' => compras_fletes,                     'compras' => compras,          'gerencia' => gerencia));
-define('impuestos', array('iva'           => .16,                                'ret_iva' => .106666,          'isr_hon'  => .10, 'isr_trans' => .04));
+define('impuestos', array('iva'           => 0.16,                               'ret_iva' => 0.106666,         'isr_hon'  => 0.1, 'isr_trans' => 0.04));
 define('tipoFlete', array(1               => 'Pre-pagado por LEA International', 2         => 'Pagado por GLM', 3          => 'Pagado por el Cliente'));
 define('rfc_cuotaExenta', array('EIN971103LZ1'));
 define('ubicaciones_kansas', array(1 => 'Laredo, Tx.', 11 => 'Matamoros', 2 => 'Sanchez', 3 => 'Monterrey', 4 => 'Escobedo', 5 => 'Leal', 6 => 'Salinas', 7 => 'Grupo LEA', 8 => 'Hermosillo', 9 => 'Mexicali', 10 => 'Liberado'));
