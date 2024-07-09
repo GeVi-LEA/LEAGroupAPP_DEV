@@ -165,6 +165,7 @@ class CatChoferes
        , chof.vigencia as chof_vigencia
        , chof.comentarios as chof_comentarios
        , chof.ine as chof_ine
+       , concat(chof.nombres, ' ', chof.apellidos)as chof_nombre
        , if(chof.is_lea like '%S%', (select p.nombre from catalogo_proveedores p where p.id = chof.cat_transp_id), 
         ( select ct.nombre from catalogo_transportistas_clientes ct where ct.id = chof.cat_transp_id)) as transportista
         FROM catalogo_choferes_transportistas chof";
@@ -191,7 +192,7 @@ class CatChoferes
 
     public function getChoferesByTransporte($transp_id)
     {
-        $sql    = " where cat_trans.id = {$transp_id} ";
+        $sql    = " where cat_transp_id = {$transp_id} ";
         $result = $this->getAll($sql);
         return $result;
     }
