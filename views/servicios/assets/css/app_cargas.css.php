@@ -69,7 +69,7 @@ canvas {
     margin: 0 auto;
     /* margin: calc(50vh - 150px) auto 0; */
     margin-top: 20px;
-    background: $canvas-bg;
+    /*background: $canvas-bg;*/
     border-radius: 3px;
     box-shadow: 0px 0px 15px 3px #ccc;
     cursor: pointer;
